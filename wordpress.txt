@@ -1,0 +1,36 @@
+💻 Launch an AWS EC2 Instance 
+
+To update our amazon linux 2
+cmd--> sudo yum update
+
+To install amazon-liux-extras package
+cmd--> sudo yum install amazon-linux-extras -y
+
+Install apache web server
+cmd--> yum install httpd
+
+download the latest Wordpress archive
+cmd -->wget https://wordpress.org/latest.tar.gz 
+
+extract the archive in our web dir
+cmd-->tar -xvzf latest.tar.gz -C /var/www/html
+
+install the required PHP packages along with the required PHP extension
+cmd--> amazon-linux-extras install php7.4
+
+check PHP version
+cmd--> php -v
+
+start httpd service
+
+# systemctl status httpd
+# systemctl start httpd
+# systemctl enable httpd 
+
+
+install MySQL
+yum isntall MySQL
+
+
+To connect with database
+#mysql -h {{End_point}} -u {{user_name}} -p
