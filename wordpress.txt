@@ -1,36 +1,59 @@
-💻 Launch an AWS EC2 Instance 
+To update DNF
+cmd--> dnf update
 
-To update our amazon linux 2
-cmd--> sudo yum update
+Install HTTPD server  
+cmd--> dnf install httpd -y
 
-To install amazon-liux-extras package
-cmd--> sudo yum install amazon-linux-extras -y
+Installing VIM & wget 
+cmd--> yum install vim wget -y
 
-Install apache web server
-cmd--> yum install httpd
+epel release:
+cmd --> yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 
-download the latest Wordpress archive
-cmd -->wget https://wordpress.org/latest.tar.gz 
+Remi repository Fo  PHP 7.4:
+cmd --> yum -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 
-extract the archive in our web dir
-cmd-->tar -xvzf latest.tar.gz -C /var/www/html
+PHP 7.4 Installation:
+cmd --> dnf module install php:remi-7.4
 
-install the required PHP packages along with the required PHP extension
-cmd--> amazon-linux-extras install php7.4
+check version:
+cmd--> php --version
 
-check PHP version
-cmd--> php -v
+PHP-MYSQLND INstallation:
+cmd --> dnf install php-mysqlnd
 
-start httpd service
+download Wordpress file:
+cmd --> wget https://wordpress.org/latest.tar.gz
 
-# systemctl status httpd
-# systemctl start httpd
-# systemctl enable httpd 
+extract rar file at doc root:
+cmd --> tar xf latest.tar.gz -C /var/www/html
+
+Starting httpd server
+
+cmd--> systemctl start httpd
+cmd --> systemctl status httpd
 
 
-install MySQL
-yum isntall MySQL
+
+Install mysql
+cmd --> dnf install mysql -y
+cmd --> rpm -q mysql
 
 
-To connect with database
-#mysql -h {{End_point}} -u {{user_name}} -p
+Connect to database
+mysql -h END_POINT -u admin
+
+
+to see data base:
+show databases;
+
+to create new database:
+create database mydb;
+
+doc root /var/www/html/wordpress
+
+edit file
+vi wp-config.php
+
+
+update detail
